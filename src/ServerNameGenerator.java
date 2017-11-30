@@ -9,7 +9,7 @@ public class ServerNameGenerator {
 
     int rnd = new Random().nextInt(name.length);
     int ran = new Random().nextInt(name2.length);
-    System.out.println(name[rnd] + " " + name2[ran]);
+    System.out.println("Your server name is: " + name[rnd] + " " + name2[ran]);
 
 
  }
