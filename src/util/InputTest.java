@@ -2,25 +2,32 @@ package util;
 
 public class InputTest {
     public static void main(String[] args) {
-        Input in = new Input();
-        System.out.println("HELLO HUMAN ENTER A FEELING");
-        String userFeeling = in.getString();
-        System.out.println(userFeeling + "IS VERY SATISFACTORY");
+        Input input = new Input();
 
-//        boolean userInput = in.yesNo();
-//        System.out.println("Do you like pie?");
-//
-//        if (userInput){
-//            System.out.println("MMMmmmm pie");
-//        } else {
-//            System.out.println("Wow no pie?");
-//        }
+        System.out.println("Please input an integer");
+        int someInt = input.getInt();
+        System.out.println(someInt);
 
-        System.out.println("PLEASE ENTER AN INTEGER HUMAN");
-        int userInput = in.getInt();
-        System.out.println("Integer is " + userInput);
+        int someIntBetween = input.getInt(1, 100);
+        System.out.println(someIntBetween);
 
 
+        System.out.println("Please input a double");
+        double someDouble = input.getDouble();
+        System.out.println(someDouble);
 
+        double anotherDouble = input.getDouble(1.0, 20.0);
+        System.out.println(anotherDouble);
+
+        System.out.println("Please input yes or a no");
+
+        if(input.yesNo()) {
+            System.out.println("You input yes or 'y'");
+        } else {
+            System.out.println("You said anything other than yes.");
+        }
+
+        String someString = input.getString();
+        System.out.println("You provided: " + someString);
     }
 }
